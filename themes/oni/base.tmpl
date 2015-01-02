@@ -22,7 +22,7 @@
           <ul>
             {foreach $link in $config.sitenav}
               <li>
-                <a href="{$link.url}">{$link.name}</a>
+                <a href="{if $link.relative}{$config.domain}/{/if}{$link.url}">{$link.name}</a>
               </li>
             {/foreach}
           </ul>
