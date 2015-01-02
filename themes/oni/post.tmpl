@@ -1,0 +1,38 @@
+{namespace coleslaw.theme.oni}
+
+{template post}
+  <article>
+    <header>
+      {if $post.tags}
+        <ul class="tags">
+          {foreach $tag in $post.tags}
+            <li><a href="{$config.domain}/{$tag.url}">{$tag.name}</a></li>
+          {/foreach}
+        </ul>
+      {/if}
+      <h1>{$post.title}</h1>
+      {if $post.date}
+        <small>Published on: <time>{$post.date}</time></small>
+      {/if}
+    </header>
+    <div class="article-content">
+      {$post.text|noAutoescape}
+    </div>
+  </article>
+
+  <nav id="page-navigation">
+    <ul>
+      {if $prev}
+        <li class="prev">
+          <a href="{$config.domain}/{$prev.url}">Previous</a>
+        </li>
+      {/if}
+      {if $next}
+        <li class="next">
+          <a href="{$config.domain}/{$next.url}">Next</a>
+        </li>
+      {/if}
+    </ul>
+    <div class="clear"></div>
+  </nav>
+{/template}

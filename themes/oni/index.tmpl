@@ -1,0 +1,74 @@
+{namespace coleslaw.theme.oni}
+{template index}
+  <header>
+    <h1 class="title">{$index.title}</h1>
+  </header>
+
+  {foreach $obj in $index.content}
+    <article>
+      <header>
+        <h1><a href="{$config.domain}/{$obj.url}">{$obj.title}</a></h1>
+        <small>Published on: <time>{$obj.date}</time></small>
+      </header>
+
+      <div class="article-content">
+        {$obj.text|noAutoescape}
+      </div>
+
+      <footer>
+        {if $obj.tags}
+          This article is tagged as:
+          {foreach $tag in $obj.tags}
+            <a href="{$config.domain}/{$tag.url}">{$tag.name}</a>{nil}
+            {if not isLast($tag)},{sp}{/if}
+          {/foreach}
+        {/if}
+      </footer>
+    </article>
+    {if not isLast($obj)}
+      <hr />
+    {/if}
+  {/foreach}
+
+  <nav id="page-navigation">
+    <ul>
+      {if $prev}
+        <li class="prev">
+          <a href="{$config.domain}/{$prev.url}">Previous</a>
+        </li>
+      {/if}
+      {if $next}
+        <li class="next">
+          <a href="{$config.domain}/{$next.url}">Next</a>
+        </li>
+      {/if}
+    </ul>
+    <div class="clear"></div>
+  </nav>
+
+  <hr />
+
+  {if $tags}
+    <div id="tagsoup">
+      <p>
+        This blog covers
+        {foreach $tag in $tags}
+          <a href="{$config.domain}/{$tag.url}">{$tag.name}</a>{nil}
+          {if not isLast($tag)},{sp}{/if}
+        {/foreach}
+      </p>
+    </div>
+  {/if}
+
+  {if $months}
+    <div id="monthsoup">
+      <p>
+        View content from
+        {foreach $month in $months}
+          <a href="{$config.domain}/{$month.url}">{$month.name}</a>{nil}
+          {if not isLast($month)},{sp}{/if}
+        {/foreach}
+      </p>
+    </div>
+  {/if}
+{/template}

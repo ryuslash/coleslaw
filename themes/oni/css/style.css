@@ -1,0 +1,75 @@
+* { margin: 0; padding: 0; border: 0; }
+
+body {
+    background-color: #ffffff;
+    color: #111111;
+    font-family: 'NewsCycleRegular';
+    font-size: 15px;
+    line-height: 1.2em;
+    padding-top: 20px;
+}
+
+pre {
+    margin: 20px 0 20px -2em;
+    background-color: #111111;
+    color: #bfbfbf;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+a { text-decoration: none; color: #0074d9; }
+a:hover { text-decoration: underline; }
+a:visited { color: #f012be; }
+
+pre, code, tt { font-family: 'FantasqueSansMonoRegular'; }
+
+h1 { font-size: 1.6em; font-family: 'NewsCycleBold'; text-align: center; }
+h2 { font-size: 1.5em; }
+h3 { font-size: 1.4em; }
+h4 { font-size: 1.3em; }
+h5 { font-size: 1.2em; }
+h6 { font-size: 1.1em; }
+
+header, p, footer { margin-bottom: 15px; }
+h2 { margin-top: 15px; margin-bottom: 10px; }
+hr { margin: 8px 0 15px 0; border: 1px solid #808080; }
+
+article h1 { font-size: 1.5em; text-align: left; margin-bottom: 2px; }
+article h2 { font-size: 1.4em; letter-spacing: 1px; }
+article h3 { font-size: 1.3em; }
+article h4 { font-size: 1.2em; }
+article h5 { font-size: 1.1em; }
+article h6 { font-size: 1.0em; }
+article .article-content { margin-left: 2em; }
+
+article h1 small {
+    display: block;
+    font-size: 0.6em;
+    font-family: 'NewsCycleRegular';
+    font-weight: normal;
+}
+
+#content, #site-header, #site-footer { max-width: 725px; margin: 0 auto; }
+#site-header, #site-footer, #page-navigation, ol, ul { margin-bottom: 15px !important; }
+#site-navigation ul, ul.tags { float: right; list-style: none; }
+#site-navigation li { display: inline-block; margin-left: 7px; }
+
+ul.tags li {
+    display: inline-block;
+    background-color: #eeeeee;
+    padding: 3px 5px;
+    border-radius: 4px;
+    margin-left: 5px;
+    text-transform: uppercase;
+}
+
+ul.tags li a {
+    color: #111111;
+    font-family: 'FantasqueSansMonoRegular';
+}
+
+#page-navigation ul { list-style: none; }
+#page-navigation li.prev { float: left; }
+#page-navigation li.next { float: right; }
+
+.clear { clear: both; }
