@@ -50,6 +50,8 @@ article h1 small {
     font-weight: normal;
 }
 
+article ul { margin-left: 1em; }
+
 #content, #site-header, #site-footer { max-width: 725px; margin: 0 auto; }
 #site-header, #site-footer, #page-navigation, ol, ul { margin-bottom: 15px !important; }
 #site-navigation ul, ul.tags { float: right; list-style: none; }
