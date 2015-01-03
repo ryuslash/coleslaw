@@ -21,7 +21,7 @@ a { text-decoration: none; color: #0074d9; }
 a:hover { text-decoration: underline; }
 a:visited { color: #f012be; }
 
-pre, code, tt { font-family: 'FantasqueSansMonoRegular'; }
+pre, code, tt { font-family: 'FantasqueSansMono-Regular'; }
 
 h1 { font-size: 1.6em; font-family: 'NewsCycleBold'; text-align: center; }
 h2 { font-size: 1.5em; }
@@ -65,7 +65,7 @@ ul.tags li {
 
 ul.tags li a {
     color: #111111;
-    font-family: 'FantasqueSansMonoRegular';
+    font-family: 'FantasqueSansMono-Regular';
 }
 
 #page-navigation ul { list-style: none; }
